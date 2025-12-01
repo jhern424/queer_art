@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queer Tarot Reading</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Queer Tarot Reading</h1>
+        
+        <div id="input-section" class="input-section">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="question">Your Question:</label>
+                <textarea id="question" placeholder="What would you like guidance on?" rows="3" required></textarea>
+            </div>
+            
+            <button id="start-reading" class="btn">Begin Reading</button>
+        </div>
+        
+        <div id="reading-section" class="reading-section hidden">
+            <div class="greeting">
+                <p id="greeting-text"></p>
+            </div>
+            
+            <div class="cards-container">
+                <div class="card-slot" data-position="past">
+                    <h3>Past</h3>
+                    <div class="card-placeholder" id="card-past">
+                        <div class="card-back"></div>
+                    </div>
+                    <p class="card-name" id="name-past"></p>
+                </div>
+                
+                <div class="card-slot" data-position="present">
+                    <h3>Present</h3>
+                    <div class="card-placeholder" id="card-present">
+                        <div class="card-back"></div>
+                    </div>
+                    <p class="card-name" id="name-present"></p>
+                </div>
+                
+                <div class="card-slot" data-position="future">
+                    <h3>Future</h3>
+                    <div class="card-placeholder" id="card-future">
+                        <div class="card-back"></div>
+                    </div>
+                    <p class="card-name" id="name-future"></p>
+                </div>
+            </div>
+            
+            <button id="new-reading" class="btn btn-secondary">New Reading</button>
+            <button id="artist-statement" class="btn btn-tertiary">Artist Statement</button>
+        </div>
+        
+        <div id="statement-section" class="statement-section hidden">
+            <h2>Artist Statement</h2>
+            <p class="statement-text">
+                In an era where artificial intelligence synthesizes our reality, the raw, unadorned human body remains a final frontier of authentic expression. I decided to do a Gay Men's Tarot, that explores the male psyche and sensuality of the men's body, through lenses that AI cannot yet fully replicate: the vulnerability, imperfection, and visceral truth of the nude male form. I decided to strip away the costumes of traditional Tarot, aiming to expose the archetypes living beneath the skin.
+            </p>
+            
+            <h3>Inspiration</h3>
+            <p class="statement-text">
+                This work draws heavily on Deborah Oak's teaching of Starhawk's definition of magic as "changing consciousness at will." Art, like ritual, begins within the self and radiates outward to challenge entrenched structures. The "magic" of this project lies in re-contextualizing the gay male body—shifting the viewer's consciousness from perceiving nudity as merely explicit to recognizing it as archetypal, sacred, and profoundly human.
+            </p>
+            <p class="statement-text">
+                Annie Sprinkle serves as a primary influence, particularly through her creation of explicit card decks and her revolutionary assertion that "the body is a laboratory." Her work validates the artistic examination of sexuality not as a private indulgence, but as deliberate, embodied research. As Sprinkle suggests, explicit art functions as "a mirror of our culture." Adopting her methodology, this Tarot deck serves as a mirror specifically for the gay and queer psyche—a visceral truth that, unlike AI-generated perfection, is rooted in the messy, human reality of flesh and blood.
+            </p>
+            
+            <h3>Card Gallery</h3>
+            <p class="statement-text">
+                Explore each card in the deck and discover its meaning.
+            </p>
+            
+            <div class="gallery-container">
+                <button class="gallery-nav gallery-prev" id="gallery-prev">&larr;</button>
+                
+                <div class="gallery-card">
+                    <div class="gallery-card-image">
+                        <img id="gallery-image" src="" alt="">
+                    </div>
+                    <h4 id="gallery-card-name"></h4>
+                    <div class="gallery-description">
+                        <p id="gallery-description"></p>
+                    </div>
+                </div>
+                
+                <button class="gallery-nav gallery-next" id="gallery-next">&rarr;</button>
+            </div>
+            
+            <button id="back-from-statement" class="btn">Back to Reading</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
